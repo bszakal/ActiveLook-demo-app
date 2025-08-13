@@ -28,6 +28,7 @@
 		2307D9962732C1CB000732DC /* DisplayCommandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307D9872732C1CB000732DC /* DisplayCommandsViewController.swift */; };
 		2307D9972732C1CB000732DC /* GeneralCommandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307D9882732C1CB000732DC /* GeneralCommandsViewController.swift */; };
 		23923B742747AF0400C441AA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 23923B732747AF0400C441AA /* README.md */; };
+		612958DA2E4CAA4600CACEA8 /* ActiveLookSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 612958D92E4CAA4600CACEA8 /* ActiveLookSDK */; };
 		61F77C422E4734C8006395A4 /* ActiveLookSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 61F77C412E4734C8006395A4 /* ActiveLookSDK */; };
 		61FA68EE2E47406A0021224D /* ActiveLookSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 61FA68ED2E47406A0021224D /* ActiveLookSDK */; };
 		61FA68F22E4741B00021224D /* ActiveLookSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 61FA68F12E4741B00021224D /* ActiveLookSDK */; };
@@ -62,7 +63,6 @@
 		2307D9872732C1CB000732DC /* DisplayCommandsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayCommandsViewController.swift; sourceTree = "<group>"; };
 		2307D9882732C1CB000732DC /* GeneralCommandsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralCommandsViewController.swift; sourceTree = "<group>"; };
 		23923B732747AF0400C441AA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		61FA68F32E4741E10021224D /* ActiveLookSDK */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ActiveLookSDK; path = /Users/benjaminszakal/Development/Interview/ActiveLookSDK; sourceTree = "<absolute>"; };
 		B5696C4D29813A1700F3B72A /* ViewerCommandsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewerCommandsViewController.swift; sourceTree = "<group>"; };
 		B5BA1BB12C21793F00F85C90 /* demo-cfg.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "demo-cfg.txt"; sourceTree = "<group>"; };
 		B5D05B192C216BA700A8E6C3 /* AnimationCommandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCommandsViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				612958DA2E4CAA4600CACEA8 /* ActiveLookSDK in Frameworks */,
 				61FA68EE2E47406A0021224D /* ActiveLookSDK in Frameworks */,
 				61FA68F22E4741B00021224D /* ActiveLookSDK in Frameworks */,
 				61F77C422E4734C8006395A4 /* ActiveLookSDK in Frameworks */,
@@ -87,7 +88,6 @@
 		2307D95927329CB9000732DC = {
 			isa = PBXGroup;
 			children = (
-				61FA68F32E4741E10021224D /* ActiveLookSDK */,
 				61F77C862E473F57006395A4 /* Frameworks */,
 				2307D96427329CB9000732DC /* example */,
 				2307D96327329CB9000732DC /* Products */,
@@ -196,6 +196,7 @@
 			);
 			mainGroup = 2307D95927329CB9000732DC;
 			packageReferences = (
+				612958D82E4CAA4600CACEA8 /* XCRemoteSwiftPackageReference "ActiveLookiOS" */,
 			);
 			productRefGroup = 2307D96327329CB9000732DC /* Products */;
 			projectDirPath = "";
@@ -472,6 +473,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		612958D82E4CAA4600CACEA8 /* XCRemoteSwiftPackageReference "ActiveLookiOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bszakal/ActiveLookiOS";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		61F77C372E4723E9006395A4 /* XCRemoteSwiftPackageReference "ActiveLookiOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/bszakal/ActiveLookiOS";
@@ -499,6 +508,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		612958D92E4CAA4600CACEA8 /* ActiveLookSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 612958D82E4CAA4600CACEA8 /* XCRemoteSwiftPackageReference "ActiveLookiOS" */;
+			productName = ActiveLookSDK;
+		};
 		61F77C412E4734C8006395A4 /* ActiveLookSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 61F77C372E4723E9006395A4 /* XCRemoteSwiftPackageReference "ActiveLookiOS" */;
