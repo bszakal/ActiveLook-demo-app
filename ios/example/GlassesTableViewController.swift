@@ -90,7 +90,7 @@ class GlassesTableViewController: UITableViewController {
                 
                 self.connecting = false
                 self.connectionTimer?.invalidate()
-                if (glasses.isFirmwareAtLeast(version: "4.0")) {
+                if true  { //(glasses.isFirmwareAtLeast(version: "4.0"))
                     let viewController = CommandsMenuTableViewController(glasses)
                     self.navigationController?.pushViewController(viewController, animated: true)
                 } else {
@@ -159,7 +159,7 @@ class GlassesTableViewController: UITableViewController {
 
             }, onScanError: { [weak self] (error: Error) in
                 self?.stopScanning()
-            }
+            }, forDeviceType: .simulator
         )
 
         scanTimer = Timer.scheduledTimer(withTimeInterval: scanDuration, repeats: false) { timer in
